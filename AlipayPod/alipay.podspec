@@ -44,7 +44,7 @@ Pod::Spec.new do |spec|
    "CoreText"
 
   spec.ios.vendored_frameworks = "AlipayPod/AlipaySDK.framework"
-  spec.libraries = "libc++", "libz"
+  spec.libraries = "c++", "z"
 
   spec.requires_arc = true
 
