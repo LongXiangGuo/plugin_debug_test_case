@@ -1,0 +1,6 @@
+framework module StaticFrameworkDB {
+  umbrella header "StaticFrameworkDB.h"
+
+  export *
+  module * { export * }
+}
