@@ -17,4 +17,14 @@
 └── lib_demo_f  (plugin  依赖'libStaticFrameworkCA.a',包含了libStaticFrameworkA.a)
 ├── example_ef  (lib_demo_e & lib_demo_f 同时集成测试 失败, 符号重复 )
 ```
-
+## 测试4: 通过引用静态Pods测试,依然会存在同样的问题
+├── example_pods (测试插件 g,h,i)
+├── lib_demo_g
+├── lib_demo_h
+├── lib_demo_i
+├── pod_lib_a
+├── pod_lib_a.podspec (pod打包错误)
+├── pod_lib_b   (pod b)
+├── pod_lib_bc  (pod bc,包含 pod b)
+└── pod_lib_dc  (pod dc,包含 pod b)
+以上3个插件(lib_demo_g/lib_demo_h/lib_demo_i)组合搭配集成测试均报符号冲突
